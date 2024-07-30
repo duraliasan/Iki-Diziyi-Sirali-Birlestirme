@@ -6,12 +6,12 @@ int main()
     int dizi1[10]= {5,7,20,96,48,14,78,51,3,27};
     int dizi2[4]= {10,1,100,85};
     int diziT[]= {};
-    int i=0,j=0,k=0,elemanke1,elemanke2,temp;
-    elemanke1 = sizeof(dizi1)/4;
-    elemanke2 = sizeof(dizi2)/4;
-    for(i=0; i<elemanke1-1; i++)
+    int i=0,j=0,k=0,eleman1,eleman2,temp;
+    eleman1 = sizeof(dizi1)/4;
+    eleman2 = sizeof(dizi2)/4;
+    for(i=0; i<eleman1-1; i++)
     {
-        for(j=i+1; j<elemanke1; j++)
+        for(j=i+1; j<eleman1; j++)
         {
             if(dizi1[i]>dizi1[j])
             {
@@ -21,9 +21,9 @@ int main()
             }
         }
     }
-    for(i=0; i<elemanke2-1; i++)
+    for(i=0; i<eleman2-1; i++)
     {
-        for(j=i+1; j<elemanke2; j++)
+        for(j=i+1; j<eleman2; j++)
         {
             if(dizi2[i]>dizi2[j])
             {
@@ -36,7 +36,7 @@ int main()
     i=0;
     j=0;
     k=0;
-    while(i<elemanke1 && j<elemanke2)
+    while(i<eleman1 && j<eleman2)
     {
         if(dizi1[i]<dizi2[j])
         {
@@ -51,26 +51,26 @@ int main()
             j++;
         }
     }
-    while(i<elemanke1)
+    while(i<eleman1)
     {
         diziT[k]=dizi1[i];
         k++;
         i++;
     }
-    while(j<elemanke2)
+    while(j<eleman2)
     {
         diziT[k]=dizi2[j];
         j++;
         k++;
     }
 
-    for(i=0; i<elemanke1; i++)
+    for(i=0; i<eleman1; i++)
         printf("%5d",dizi1[i]);
     printf("\n");
-    for(i=0; i<elemanke2; i++)
+    for(i=0; i<eleman2; i++)
         printf("%5d",dizi2[i]);
     printf("\n");
-    for(i=0; i<elemanke1+elemanke2; i++)
+    for(i=0; i<eleman1+eleman2; i++)
         printf("%5d",diziT[i]);
 
 
